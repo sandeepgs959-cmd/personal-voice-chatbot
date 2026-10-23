@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Voice Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="avatar">🎙️</div>
+      <div>
+        <h1>Personal Voice Chatbot</h1>
+        <p>Talk to me in English or Hindi</p>
+      </div>
+      <span class="status" id="status">Ready</span>
+    </header>
+
+    <section class="settings">
+      <label for="language">Voice language</label>
+      <select id="language">
+        <option value="en-IN">English (India)</option>
+        <option value="hi-IN">Hindi</option>
+        <option value="en-US">English (US)</option>
+      </select>
+      <label class="toggle"><input type="checkbox" id="speakToggle" checked> Speak replies aloud</label>
+    </section>
+
+    <section class="chat" id="chat" aria-live="polite">
+      <div class="bubble bot">Namaste! 👋 Main aapka personal voice chatbot hoon. Mic button dabakar baat karein, ya neeche type karein.</div>
+    </section>
+
+    <div class="controls">
+      <button id="mic" class="mic" title="Start voice input">🎤 <span>Talk</span></button>
+      <form id="form">
+        <input id="message" autocomplete="off" placeholder="Type your message..." aria-label="Message">
+        <button type="submit" class="send">Send</button>
+      </form>
+    </div>
+    <div class="bottom">
+      <button id="stopVoice" class="quiet">🔇 Stop speaking</button>
+      <button id="clear" class="quiet">Clear chat</button>
+    </div>
+    <p class="note" id="note">Voice input needs microphone permission and a supported browser (Chrome or Edge recommended).</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
